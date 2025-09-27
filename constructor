@@ -1,0 +1,20 @@
+// Parent class
+class Person {
+    Person() {
+        System.out.println("Person created");
+    }
+}
+
+// Child class extending Person
+class Student extends Person {
+    Student() {
+        super();  // Calls Person's constructor
+        System.out.println("Student created");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student student = new Student();  // Create Student object
+    }
+}
