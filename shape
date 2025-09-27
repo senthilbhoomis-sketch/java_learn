@@ -1,0 +1,50 @@
+// Base class
+class Shape {
+    // Method to calculate area (to be overridden)
+    double area() {
+        return 0;
+    }
+}
+
+// Subclass Circle inherits Shape
+class Circle extends Shape {
+    double radius;
+
+    Circle(double radius) {
+        this.radius = radius;
+    }
+
+    // Override area method for circle
+    @Override
+    double area() {
+        return Math.PI * radius * radius;
+    }
+}
+
+// Subclass Rectangle inherits Shape
+class Rectangle extends Shape {
+    double length, width;
+
+    Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    // Override area method for rectangle
+    @Override
+    double area() {
+        return length * width;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Create Circle object with radius 5
+        Circle circle = new Circle(5);
+        System.out.println("Area of Circle: " + circle.area());
+
+        // Create Rectangle object with length 4 and width 6
+        Rectangle rectangle = new Rectangle(4, 6);
+        System.out.println("Area of Rectangle: " + rectangle.area());
+    }
+}
